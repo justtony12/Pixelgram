@@ -12,5 +12,5 @@ export default function Row(props) {
         pixels.push(<Pixel key={i} selectedColor={selectedColor} />)
     }
 
-    return <div className='row'></div>
+    return <div className='row'>{ pixels }</div>
 }
