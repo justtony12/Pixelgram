@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../styles/editor.scss'
 
 export default function Editor() {
@@ -7,20 +7,21 @@ export default function Editor() {
             <h1>Pixel Editor</h1>
             <h2>Enter Panel Dimensions</h2>
 
-            <span>Width:</span>
             <div id="options">
                 <div className="option">
+                    <span>Height:</span>
                     <input type='number' className="panelInput" defaultValue="16"></input>
                 </div>
             </div>
 
-            <span>Height
-                :</span>
             <div id="options">
                 <div className="option">
+                    <span>Width:</span>
                     <input type='number' className="panelInput" defaultValue="16"></input>
                 </div>
             </div>
+
+            <button className="button">Create</button>
         </div>
     )
 }
