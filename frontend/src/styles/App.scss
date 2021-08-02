@@ -1,0 +1,18 @@
+@import 'properties.scss';
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $black;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    text-align: center;
+    min-width: fit-content;
+}
