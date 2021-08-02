@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import '../styles/editor.scss'
+import { CirclePicker} from 'react-color'
 
 export default function Editor() {
     const [panelWidth, setCanvasWidth] = useState(16)
@@ -10,11 +11,17 @@ export default function Editor() {
 
     const [buttonText, setButtonText] = useState("Create Canvas")
 
+    const [selectedColor, setColor] = useState("#607d8b")
+
     function createCanvas() {
         setHideOptions(!hideOptions)
         setHideCanvas(!hideCanvas)
 
         buttonText === "Create Canvas" ? setButtonText('Resize Canvas') : setButtonText("Create Canvas")
+    }
+
+    function changeColor(color) {
+        setColor(color.hex)
     }
 
     return (
@@ -35,6 +42,8 @@ export default function Editor() {
             </div>)}
 
             <button className="button" onClick={createCanvas}>{buttonText}</button>
+
+            {hideOptions && (<CirclePicker color={selectedColor} onChangeComplete={changeColor} />)}
         </div>
     )
 }
