@@ -13,14 +13,14 @@ export default function Editor() {
             <div id="options">
                 <div className="option">
                     <span>Height:</span>
-                    <input type='number' className="panelInput" defaultValue={panelWidth}></input>
+                    <input type='number' className="panelInput" defaultValue={panelWidth} onChange={(e) => {setPanelHeight(e.target.value)}}></input>
                 </div>
             </div>
 
             <div id="options">
                 <div className="option">
                     <span>Width:</span>
-                    <input type='number' className="panelInput" defaultValue={panelHeight}></input>
+                    <input type='number' className="panelInput" defaultValue={panelHeight} onChange={(e) => {setPanelWidth(e.target.value)}}></input>
                 </div>
             </div>
 
