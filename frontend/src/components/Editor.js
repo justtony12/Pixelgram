@@ -46,11 +46,11 @@ export default function Editor() {
 
             {hideOptions && (<CirclePicker color={selectedColor} onChangeComplete={changeColor} />)}
 
-            <DrawingPanel
+            {hideOptions && (<DrawingPanel
                 height={canvasHeight}
                 width={canvasWidth}
                 selectedColor={selectedColor}
-            />
+            />)}
         </div>
     )
 }
