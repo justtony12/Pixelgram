@@ -4,8 +4,8 @@ import { CirclePicker} from 'react-color'
 import DrawingPanel from './DrawingPanel'
 
 export default function Editor() {
-    const [canvasWidth, setCanvasWidth] = useState(16)
     const [canvasHeight, setCanvasHeight] = useState(16)
+    const [canvasWidth, setCanvasWidth] = useState(16)
 
     const [hideOptions, setHideOptions] = useState(false)
     const [hideCanvas, setHideCanvas] = useState(true)
