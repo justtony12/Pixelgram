@@ -1,9 +1,8 @@
-import React from 'react';
 import '../styles/App.scss'
 import Editor from './Editor'
 import Home from './Home'
 import Feed from './Feed'
-import {Route, BrowserRouter as Router, Switch, Link} from 'react-router-dom'
+import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
 
 function App() {
     return(
