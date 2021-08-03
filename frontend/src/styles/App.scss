@@ -1,7 +1,7 @@
 body,
 html {
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    padding: 5px;
 }
 
 body {
@@ -13,4 +13,22 @@ body {
     font-family: sans-serif;
     text-align: center;
     min-width: fit-content;
+}
+
+.button {
+    font-size: 1.25rem;
+    background-color: red;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease-in-out;
+    margin-bottom: 2rem;
+
+    &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        border-color: white;
+    }
 }
