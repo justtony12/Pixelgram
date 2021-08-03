@@ -12,7 +12,7 @@ export default function Editor() {
 
     const [buttonText, setButtonText] = useState("Create Canvas")
 
-    const [selectedColor, setColor] = useState("#607d8b")
+    const [selectedColor, setColor] = useState("#000000")
 
     function createCanvas() {
         setHideOptions(!hideOptions)
