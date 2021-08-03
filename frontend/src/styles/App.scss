@@ -1,5 +1,3 @@
-@import 'properties.scss';
-
 body,
 html {
     margin: 0;
@@ -7,8 +5,8 @@ html {
 }
 
 body {
-    background: $black;
-    color: $white;
+    background: black;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
