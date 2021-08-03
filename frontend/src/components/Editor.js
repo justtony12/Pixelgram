@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import '../styles/editor.scss'
-import { CirclePicker} from 'react-color'
+import { PhotoshopPicker } from 'react-color'
 import DrawingPanel from './DrawingPanel'
 
 export default function Editor() {
@@ -44,7 +44,7 @@ export default function Editor() {
 
             <button className="button" onClick={createCanvas}>{buttonText}</button>
 
-            {hideOptions && (<CirclePicker color={selectedColor} onChangeComplete={changeColor} />)}
+            {hideOptions && (<PhotoshopPicker color={selectedColor} onChangeComplete={changeColor} />)}<br></br>
 
             {hideOptions && (<DrawingPanel
                 height={canvasHeight}
