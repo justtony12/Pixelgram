@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 
 class Home extends Component {
-    state = {}
+    state = {
+        name: 'Marcus',
+        age: 24
+    }
 
     render() {
         return (
-            <div>
-                <h1>Hello, World!</h1>
-                <h2>Welcome to my Home Page!</h2>
+            <div className="userHome" >
+                <h1>Hello, { this.state.name }!</h1>
+                <h2>You are now {this.state.age} years old!</h2>
             </div>
         )
     }
