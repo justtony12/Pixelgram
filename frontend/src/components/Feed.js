@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-export default function Feed() {
-    return (
-        <div>
-            This is my news feed page!
-        </div>
-    )
+class Feed extends Component {
+    state = {}
+
+    render() {
+        return (
+            <div>
+                <h1>Hello, World!</h1>
+                <h2>Welcome to my Feed!</h2>
+            </div>
+        )
+    }
 }
+
+export default Feed;

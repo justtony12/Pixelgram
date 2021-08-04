@@ -1,4 +1,4 @@
-import React, {useState} from 'react' //useState is a hook but I need to use Redux?
+import React, {useState} from 'react'
 import '../styles/editor.scss'
 import { PhotoshopPicker } from 'react-color'
 import DrawingPanel from './DrawingPanel'

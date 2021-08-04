@@ -1,4 +1,4 @@
-import React, { useState } from 'react' //useState is a hook but I need to use Redux?
+import React, { useState } from 'react'
 import '../styles/pixel.scss'
 
 const Pixel = (props) => {
