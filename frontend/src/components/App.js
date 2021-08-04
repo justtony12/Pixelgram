@@ -1,10 +1,11 @@
+import React from 'react'
 import '../styles/App.scss'
 import Editor from './Editor'
 import Home from './Home'
 import Feed from './Feed'
 import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
 
-function App() {
+export default function App() {
     return(
         <Router>
             <div className='App'>
@@ -19,5 +20,3 @@ function App() {
         </Router>
     ) 
 }
-
-export default App;

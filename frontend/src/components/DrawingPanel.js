@@ -7,7 +7,7 @@ import { exportComponentAsJPEG } from 'react-component-export-image'
 export default function DrawingPanel(props) {
     const {height, width, selectedColor} = props
 
-    const panelRef = useRef()
+    const canvasRef = useRef()
 
     let rows = []
 
@@ -17,12 +17,19 @@ export default function DrawingPanel(props) {
 
     return (
         <div id='drawingPanel'>
-            <div id='pixels' ref={panelRef}>
+            <div id='pixels' ref={canvasRef}>
                 {rows}
             </div>
 
-            <button className="button" onClick={() => exportComponentAsPNG(panelRef)} >Export as PNG</button>
-            <button className="button" onClick={() => exportComponentAsJPEG(panelRef)} >Export as JPEG</button>
+            <button
+                className="button"
+                onClick={() => exportComponentAsPNG(canvasRef)}
+            >Export as PNG</button>
+            
+            <button
+                className="button"
+                onClick={() => exportComponentAsJPEG(canvasRef)}
+            >Export as JPEG</button>
         </div>
     )
 }
