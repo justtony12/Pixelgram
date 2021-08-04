@@ -2,8 +2,7 @@ import React from 'react'
 import '../styles/row.scss'
 import Pixel from './Pixel'
 
-export default function Row(props) {
-
+const Row = (props) => {
     const {width, selectedColor} = props
 
     let pixels = []
@@ -14,3 +13,5 @@ export default function Row(props) {
 
     return <div className='row'>{ pixels }</div>
 }
+
+export default Row

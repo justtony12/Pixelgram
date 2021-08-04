@@ -3,7 +3,7 @@ import '../styles/editor.scss'
 import { PhotoshopPicker } from 'react-color'
 import DrawingPanel from './DrawingPanel'
 
-export default function Editor() {
+const Editor = () => {
     const [canvasHeight, setCanvasHeight] = useState(16)
     const [canvasWidth, setCanvasWidth] = useState(16)
 
@@ -64,3 +64,5 @@ export default function Editor() {
         </div>
     )
 }
+
+export default Editor

@@ -4,7 +4,7 @@ import Row from './Row'
 import { exportComponentAsPNG } from 'react-component-export-image'
 import { exportComponentAsJPEG } from 'react-component-export-image'
 
-export default function DrawingPanel(props) {
+const DrawingPanel = (props) => {
     const {height, width, selectedColor} = props
 
     const canvasRef = useRef()
@@ -33,3 +33,5 @@ export default function DrawingPanel(props) {
         </div>
     )
 }
+
+export default DrawingPanel

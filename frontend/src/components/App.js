@@ -5,7 +5,7 @@ import Home from './Home'
 import Feed from './Feed'
 import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
 
-export default function App() {
+const App = () => {
     return(
         <Router>
             <div className='App'>
@@ -18,5 +18,7 @@ export default function App() {
             <Route path='/editor' exact component={Editor}></Route>
             <Route path='/feed' exact component={Feed}></Route>
         </Router>
-    ) 
+    )
 }
+
+export default App

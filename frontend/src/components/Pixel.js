@@ -1,8 +1,7 @@
 import React, { useState } from 'react' //useState is a hook but I need to use Redux?
 import '../styles/pixel.scss'
 
-export default function Pixel(props) {
-
+const Pixel = (props) => {
     const {selectedColor} = props
 
     const [pixelColor, setPixelColor] = useState("#FFFFFF")
@@ -38,3 +37,5 @@ export default function Pixel(props) {
         </div>
     )
 }
+
+export default Pixel;
