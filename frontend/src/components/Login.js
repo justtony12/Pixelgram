@@ -4,7 +4,9 @@ class Login extends Component {
     state = {}
 
     render() {
-        return (null)
+        return (
+            <div><h1>This is my Login Page!</h1></div>
+        )
     }
 }
 
