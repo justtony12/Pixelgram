@@ -15,13 +15,11 @@ class Login extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state)
     }
 
     render() {
         return (
             <div>
-
                 <h1>Login Below</h1>
 
                 <form onSubmit={this.handleSubmit} >
