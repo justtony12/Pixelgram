@@ -10,11 +10,15 @@ class Home extends Component {
     render() {
         return (
             <div className="userHome" >
+                <h1>Welcome {this.state.name}!</h1>
+                
                 <form>
                     <label>Upload Art:</label>
                     <input type="file" name='avatar' /><br />
 
-                    <textarea className='setBox' defaultValue="Write a caption..." />
+                    <textarea className='setBox' defaultValue="Write a caption..." /><br />
+
+                    <button className='button' >Post</button>
                 </form>
             </div>
         )
