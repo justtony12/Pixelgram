@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import '../styles/home.scss'
+import thunk from 'redux-thunk'
+import { createStore, applyMiddleware } from 'redux'
 
 class Home extends Component {
     state = {
        posts: []
     }
 
-    componentDidMount(){
-        fetch('https://jsonplaceholder.typicode.com/posts')
+    componentDidMount() {
+        fetch('https://jsonplaceholder.typicode.com/posts/')
         .then(res => res.json())
         .then(
             (result) => {

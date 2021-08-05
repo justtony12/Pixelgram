@@ -1,20 +1,40 @@
 import React, { Component } from 'react';
 
 class Login extends Component {
-    state = {
-        username: null,
-        email: null,
-        password: null
+    constructor() {
+        super()
+        this.state = {
+            username: '',
+            email: '',
+            password: ''
+        }
     }
 
     handleChange = (e) => {
         this.setState({
-            [e.target.id]: e.target.value
+            [e.target.username]: e.target.value
         })
     }
 
     handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
+
+        let user = {
+            username: this.state.username,
+            email: this.state.email,
+            password: this.state.password
+        }
+
+        fetch('https://localhost:3000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then(resp => resp.json())
+        .then(data => console.log(data))
     }
 
     render() {
@@ -24,13 +44,13 @@ class Login extends Component {
 
                 <form onSubmit={this.handleSubmit} >
                     <label>Username:</label>
-                    <input type="text" id='name' onChange={this.handleChange} /><br/>
+                    <input type="text" className='username' value={this.state.username} onChange={this.handleChange} /><br/>
 
                     <label>Email:</label>
-                    <input type="text" id='email' onChange={this.handleChange} /><br/>
+                    <input type="text" className='email' value={this.state.email} onChange={this.handleChange} /><br/>
 
                     <label>Password:</label>
-                    <input type="text" id='password_digest' onChange={this.handleChange} /><br/>
+                    <input type="text" className='password' value={this.state.password} onChange={this.handleChange} /><br/>
 
                     <button>Submit</button>
                 </form>
