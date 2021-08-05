@@ -1,40 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { Switch } from 'react-router';
 import '../styles/home.scss'
-import thunk from 'redux-thunk'
-import { createStore, applyMiddleware } from 'redux'
 
 class Home extends Component {
-    state = {
-       posts: []
-    }
-
-    componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/posts/')
-        .then(res => res.json())
-        .then(
-            (result) => {
-            this.setState({
-                posts: result.data
-            })
-        })
+    constructor() {
+        super()
+        this.state = {
+            CurrentUser: null,
+            CurrentAvatar: null,
+            posts: []
+         }
+     
     }
 
     render() {
-        const { posts } = this.state;
-        const postList = posts ? (
-            posts.map(post => {
-                return(
-                    <div className='postCard' key={post.id}>
-                        <div className='cardContent'>
-                            <span className='cardTitle'>{post.title}</span>
-                            <p>{post.body}</p>
-                        </div>
-                    </div>
-                )
-            })
-        ) : (
-            <div className='posts'>No posts yet...</div>
-        )
 
         return (
             <div className="userHome" >
@@ -49,7 +28,13 @@ class Home extends Component {
                     <button className='button' >Post</button>
                 </form>
 
-                {postList}
+                {/* {postList} */}
+
+                <Fragment>
+                    <Switch>
+                        <Route exact path='/login' render={() => <Login setCurrentUser={this.setCurrentUser} />} />
+                    </Switch>
+                </Fragment>
             </div>
         )
     }
