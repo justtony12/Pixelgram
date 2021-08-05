@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/home.scss'
 
 class Home extends Component {
     state = {
@@ -9,8 +10,12 @@ class Home extends Component {
     render() {
         return (
             <div className="userHome" >
-                <h1>Hello, { this.state.name }!</h1>
-                <h2>You are now {this.state.age} years old!</h2>
+                <form>
+                    <label>Upload Art:</label>
+                    <input type="file" name='avatar' /><br />
+
+                    <textarea className='setBox' defaultValue="Write a caption..." />
+                </form>
             </div>
         )
     }
