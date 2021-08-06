@@ -5,6 +5,7 @@ import Home from './Home'
 import Feed from './Feed'
 import Login from './Login'
 import SignUp from './SignUp'
+import Post from './Post'
 import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
 
 const App = () => {
@@ -18,12 +19,12 @@ const App = () => {
                 <Link to='/sign-up'><button className='button'>Sign Up</button></Link>
             </div>
 
-            <Route path='/home' exact component={Home}></Route>
-            <Route path='/editor' exact component={Editor}></Route>
-            <Route path='/feed' exact component={Feed}></Route>
-            <Route path='/' exact component={Login}></Route>
-            <Route path='/sign-up' exact component={SignUp}></Route>
-            
+            <Route path='/home' exact component={Home} />
+            <Route path='/editor' exact component={Editor} />
+            <Route path='/feed' exact component={Feed} />
+            <Route path='/' exact component={Login} />
+            <Route path='/sign-up' exact component={SignUp} />
+            <Route path='/:post_id' component={Post} />
         </Router>
     )
 }

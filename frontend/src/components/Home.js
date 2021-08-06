@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
 import '../styles/home.scss';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 
 class Home extends Component {
+
+    handleClick = () => {
+        this.props.deletePost(this.props.post.id);
+    }
+
     render() {
         const { posts } = this.props;
         const postList = posts.length ? (
             posts.map(post => {
                 return (
-                    <div>
-                        <span>{post.image}</span>
+                    <div className='postCard' key={post.id}>
+                        <Link to={'/' + post.id} ><span>{post.image}</span></Link>
                         <p>{post.caption}</p>
                     </div>
                 )
             })
-        ) : (
-            <div>You do not have any posts yet...</div>
-        )
+        ) : (<div>You do not have any posts yet...</div>)
 
         return (
             <div className="userHome" >
@@ -29,7 +33,8 @@ class Home extends Component {
                     <textarea className='setBox' defaultValue="Write a caption..." /><br />
 
                     <button className='button' >Post</button>
-                </form>
+                </form><br/>
+
                 {postList}
             </div>
         )
@@ -42,4 +47,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(Home)
