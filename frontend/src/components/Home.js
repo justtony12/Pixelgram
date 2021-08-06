@@ -1,18 +1,22 @@
 import React, { Component, Fragment } from 'react';
-import '../styles/home.scss'
+import '../styles/home.scss';
+import { connect } from 'react-redux';
 
 class Home extends Component {
-    constructor() {
-        super()
-        this.state = {
-            CurrentUser: null,
-            CurrentAvatar: null,
-            posts: []
-         }
-     
-    }
-
     render() {
+        const { posts } = this.props;
+        const postList = posts.length ? (
+            posts.map(post => {
+                return (
+                    <div>
+                        <span>{post.image}</span>
+                        <p>{post.caption}</p>
+                    </div>
+                )
+            })
+        ) : (
+            <div>You do not have any posts yet...</div>
+        )
 
         return (
             <div className="userHome" >
@@ -26,9 +30,16 @@ class Home extends Component {
 
                     <button className='button' >Post</button>
                 </form>
+                {postList}
             </div>
         )
     }
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+    return {
+        posts: state.posts
+    }
+}
+
+export default connect(mapStateToProps)(Home);
