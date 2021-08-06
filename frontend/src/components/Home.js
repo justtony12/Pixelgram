@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import { Switch } from 'react-router';
 import '../styles/home.scss'
 
 class Home extends Component {
@@ -17,7 +16,7 @@ class Home extends Component {
 
         return (
             <div className="userHome" >
-                <h1>Welcome {this.state.name}!</h1>
+                <h1>Welcome User!</h1>
                 
                 <form>
                     <label>Upload Art:</label>
@@ -27,14 +26,6 @@ class Home extends Component {
 
                     <button className='button' >Post</button>
                 </form>
-
-                {/* {postList} */}
-
-                <Fragment>
-                    <Switch>
-                        <Route exact path='/login' render={() => <Login setCurrentUser={this.setCurrentUser} />} />
-                    </Switch>
-                </Fragment>
             </div>
         )
     }

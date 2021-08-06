@@ -15,15 +15,15 @@ class SignUp extends Component {
             <div>
                 <h1>Sign Up Below</h1>
 
-                <form onSubmit={this.handleSubmit} >
+                <form onSubmit={null} >
                     <label>Username:</label>
-                    <input type="text" className='username' value={this.state.username} onChange={this.handleChange} /><br/>
+                    <input type="text" className='username' value={this.state.username} onChange={null} /><br/>
 
                     <label>Email:</label>
-                    <input type="text" className='email' value={this.state.email} onChange={this.handleChange} /><br/>
+                    <input type="text" className='email' value={this.state.email} onChange={null} /><br/>
 
                     <label>Password:</label>
-                    <input type="text" className='password' value={this.state.password} onChange={this.handleChange} /><br/>
+                    <input type="text" className='password' value={this.state.password} onChange={null} /><br/>
 
                     <button>Sign Up</button>
                 </form>
