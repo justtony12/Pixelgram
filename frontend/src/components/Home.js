@@ -4,11 +4,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 
 class Home extends Component {
-
-    handleClick = () => {
-        this.props.deletePost(this.props.post.id);
-    }
-
     render() {
         const { posts } = this.props;
         const postList = posts.length ? (
