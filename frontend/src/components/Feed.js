@@ -1,16 +1,36 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Feed extends Component {
-    state = {}
-
     render() {
+        const { posts } = this.props;
+        const postList = posts.length ? (
+            posts.map(post => {
+                return (
+                    <div>
+                        <span>{post.image}</span>
+                        <p>{post.caption}</p>
+                    </div>
+                )
+            })
+        ) : (
+            <div>You do not have any posts on your feed yet...</div>
+        )
+
         return (
-            <div>
-                <h1>Hello, World!</h1>
-                <h2>Welcome to my Feed!</h2>
+            <div className="userHome" >
+                <h1>Welcome User!</h1>
+                
+                {postList}
             </div>
         )
     }
 }
 
-export default Feed;
+const mapStateToProps = (state) => {
+    return {
+        posts: state.posts
+    }
+}
+
+export default connect(mapStateToProps)(Feed);
