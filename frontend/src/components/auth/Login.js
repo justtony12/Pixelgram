@@ -1,31 +1,33 @@
 import React, { Component } from 'react';
 
 class Login extends Component {
-    constructor() {
-        super()
-        this.state = {
-            username: '',
-            email: '',
-            password: ''
-        }
+    state = {
+        username: '',
+        email: '',
+        password: ''
+    }
+
+    handleChange = (e) => {
+        console.log(e)
+    }
+
+    handleSubmit = (e) => {
+        console.log(e)
     }
 
     render() {
         return (
             <div>
-                <h1>Login Below</h1>
-
-                <form onSubmit={null} >
-                    <label>Username:</label>
-                    <input type="text" className='username' value={this.state.username} onChange={null} /><br/>
+                <form onSubmit={this.handleSubmit} >
+                    <h1>Login Below</h1>
 
                     <label>Email:</label>
-                    <input type="text" className='email' value={this.state.email} onChange={null} /><br/>
+                    <input type="email" id='email' onChange={this.handleChange} /><br/>
 
                     <label>Password:</label>
-                    <input type="text" className='password' value={this.state.password} onChange={null} /><br/>
+                    <input type="password" id='password' onChange={this.handleChange} /><br/>
 
-                    <button>Log In</button>
+                    <button>Login</button>
                 </form>
             </div>
         )
