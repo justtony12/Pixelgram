@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/row.scss'
-import Pixel from './Pixel'
+import '../editing/styles/row.scss'
+import Pixel from '../editing/Pixel'
 
 const Row = (props) => {
     const {width, selectedColor} = props

@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
-import '../styles/drawingPanel.scss'
-import Row from './Row'
+import '../editing/styles/drawingPanel.scss'
+import Row from '../editing/Row'
 import { exportComponentAsPNG } from 'react-component-export-image'
 import { exportComponentAsJPEG } from 'react-component-export-image'
 

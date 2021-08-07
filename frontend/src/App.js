@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/App.scss'
-import Navbar from '../layout/Navbar'
+import '../src/components/editing/styles/App.scss'
+import Navbar from './layout/Navbar'
 
 const App = () => {
     return (
