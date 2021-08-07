@@ -8,7 +8,7 @@ class Feed extends Component {
             posts.map(post => {
                 return (
                     <div>
-                        <span>{post.image}</span>
+                        <span>{post.art}</span>
                         <p>{post.caption}</p>
                     </div>
                 )
