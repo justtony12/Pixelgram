@@ -1,13 +1,22 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom';
+import Login from '../components/Login'
+import SignUp from '../components/SignUp'
 
-const SignedOutLinks = () => {
+const SignedOut = () => {
     return (
-        <ul>
-            <li><NavLink to='/' />Sign Up</li>
-            <li><NavLink to='/' />Login</li>
-        </ul>
+        <Router>
+            <div>
+                <Link to='/'><button className='button'>Login</button></Link>
+                <Link to='/sign-up'><button className='button'>Sign Up</button></Link>
+            </div>
+            
+            <Switch>
+                <Route exact path='/' component={Login} />
+                <Route exact path='/sign-up' component={SignUp} />
+            </Switch>
+        </Router>
     )
 }
 
-export default SignedOutLinks;
+export default SignedOut;

@@ -1,15 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import SignedInLinks from './SignedInLinks';
-import SignedOutLinks from './SignedOutLinks';
+import SignedIn from './SignedInLinks';
+import SignedOut from './SignedOutLinks';
 
 const Navbar = () => {
     return (
         <nav className="navBar">
             <div>
-                <Link to='/' className="logo">Pixelgram</Link>
-                <SignedInLinks />
-                <SignedOutLinks />
+                {/* <Link to='/' className="logo"><button className="button">Pixelgram</button></Link> */}
+                <SignedIn />
+                <SignedOut />
             </div>
         </nav>
     )
