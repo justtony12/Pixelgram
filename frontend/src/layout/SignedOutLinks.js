@@ -7,13 +7,13 @@ const SignedOut = () => {
     return (
         <Router>
             <div>
-                <Link to='/'><button className='button'>Login</button></Link>
-                <Link to='/sign-up'><button className='button'>Sign Up</button></Link>
+                <Link to='/login'><button className='button'>Login</button></Link>
+                <Link to='/signup'><button className='button'>Sign Up</button></Link>
             </div>
             
             <Switch>
-                <Route exact path='/' component={Login} />
-                <Route exact path='/sign-up' component={SignUp} />
+                <Route exact path='/login' component={Login} />
+                <Route exact path='/signup' component={SignUp} />
             </Switch>
         </Router>
     )

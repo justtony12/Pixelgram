@@ -1,31 +1,39 @@
 import React, { Component } from 'react';
 
 class SignUp extends Component {
-    constructor() {
-        super()
-        this.state = {
-            username: '',
-            email: '',
-            password: ''
-        }
+    state = {
+        username: '',
+        email: '',
+        password: ''
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.id]: e.target.value
+        })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(this.state)
     }
 
     render() {
         return (
             <div>
-                <h1>Sign Up Below</h1>
+                <form onSubmit={this.handleSubmit} >
+                    <h1>SignUp Below</h1>
 
-                <form onSubmit={null} >
                     <label>Username:</label>
-                    <input type="text" className='username' value={this.state.username} onChange={null} /><br/>
+                    <input type="text" id='username' onChange={this.handleChange} /><br/>
 
                     <label>Email:</label>
-                    <input type="text" className='email' value={this.state.email} onChange={null} /><br/>
+                    <input type="email" id='email' onChange={this.handleChange} /><br/>
 
                     <label>Password:</label>
-                    <input type="text" className='password' value={this.state.password} onChange={null} /><br/>
+                    <input type="password" id='password' onChange={this.handleChange} /><br/>
 
-                    <button>Sign Up</button>
+                    <button>SignUp</button>
                 </form>
             </div>
         )
