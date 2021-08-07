@@ -6,7 +6,7 @@ import Feed from './Feed'
 import Login from './Login'
 import SignUp from './SignUp'
 import Post from './Post'
-import Navbar from '../layout/SignedOutLinks'
+import Navbar from '../layout/Navbar'
 import {Route, BrowserRouter as Router, Link, Switch} from 'react-router-dom'
 
 const App = () => {
