@@ -4,7 +4,8 @@ import Editor from '../components/editing/Editor'
 import Home from '../components/userContent/Home'
 import Feed from '../components/userContent/Feed'
 import Post from '../components/userContent/Post'
-import Logout from '../components/auth/Logout';
+import Logout from '../components/auth/Logout'
+import Create from '../components/userContent/Create'
 
 const SignedIn = () => {
     return (
@@ -21,7 +22,8 @@ const SignedIn = () => {
                 <Route exact path='/editor' component={Editor} />
                 <Route exact path='/feed' component={Feed} />
                 <Route exact path='/logout'component={Logout} />
-                <Route exact path='/:post_id'component={Post} />
+                <Route exact path='/create'component={Create} />
+                <Route exact path='/post/:post_id'component={Post} />
             </Switch>
         </Router>
     )
