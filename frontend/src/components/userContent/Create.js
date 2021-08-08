@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createPost } from '../userContent/actions/postActions';
 
 class Create extends Component {
     state = {
@@ -14,7 +16,8 @@ class Create extends Component {
     
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state)
+        // console.log(this.state)
+        this.props.createPost(this.state)
     }
 
     handleSelectedFile = (e) => {
@@ -42,4 +45,10 @@ class Create extends Component {
     }
 }
 
-export default Create;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createPost: (post) => dispatch(createPost(post))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Create);
