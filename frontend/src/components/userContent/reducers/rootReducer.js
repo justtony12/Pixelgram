@@ -1,22 +1,10 @@
-const initState = {
-    posts: [
-        {id: '1', art: 'img_1', caption: 'this is my caption for my first post!'},
-        {id: '2', art: 'img_2', caption: 'this is my caption for my second post!'},
-        {id: '3', art: 'img_3', caption: 'this is my caption for my third post!'}
-    ]
-}
+import authReducer from "./authReducer";
+import postReducer from "./postReducer";
+import { combineReducers } from "redux";
 
-const rootReducer = (state = initState, action) => {
-    if (action.type === 'DELETE_POST') {
-        let newPosts = state.posts.filter(post => {
-            return post.id !== action.id
-        });
-        return {
-            ...state,
-            posts: newPosts
-        }
-    }
-    return state;
-}
+const rootReducer = combineReducers({
+    auth: authReducer,
+    post: postReducer
+})
 
 export default rootReducer;
