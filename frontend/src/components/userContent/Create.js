@@ -17,6 +17,12 @@ class Create extends Component {
         console.log(this.state)
     }
 
+    handleSelectedFile = (e) => {
+        this.setState({
+            art: e.target.files[0]
+        })
+    }
+
     render() {
         return (
             <div>
@@ -24,7 +30,7 @@ class Create extends Component {
 
                 <form onSubmit={this.handleSubmit}>
                     <label>Upload Art:</label>
-                    <input type='text' id='art' onChange={this.handleChange} /><br/>
+                    <input type='file' id='art' onChange={this.handleSelectedFile} /><br/>
 
                     <label>Write a capation:</label>
                     <input type='text' id='caption' onChange={this.handleChange} /><br/>
