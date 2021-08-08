@@ -4,7 +4,7 @@ import { createPost } from '../userContent/actions/postActions';
 
 class Create extends Component {
     state = {
-        art: '',
+        art: null,
         caption: ''
     }
     
@@ -13,16 +13,25 @@ class Create extends Component {
             [e.target.id]: e.target.value
         })
     }
-    
-    handleSubmit = (e) => {
-        e.preventDefault();
-        this.props.createPost(this.state)
-    }
 
     handleSelectedFile = (e) => {
         this.setState({
             art: e.target.files[0]
         })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        // this.props.createPost(this.state)
+        const formData = new FormData();
+        formData.append('art', this.state.art);
+        formData.append('caption', this.state.caption);
+
+        fetch('http://localhost:3000/posts', {
+            method: 'POST',
+            body: formData
+        })
+        .catch(error=>console.log(error));
     }
 
     render() {
@@ -32,7 +41,7 @@ class Create extends Component {
 
                 <form onSubmit={this.handleSubmit}>
                     <label>Upload Art:</label>
-                    <input type='file' id='art' onChange={this.handleSelectedFile} /><br/>
+                    <input type='file' id='art' accept='image/*' multiple={false} onChange={this.handleSelectedFile} /><br/>
 
                     <label>Write a capation:</label>
                     <input type='text' id='caption' onChange={this.handleChange} /><br/>
