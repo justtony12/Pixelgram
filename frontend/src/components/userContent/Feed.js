@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
+import '../editing/styles/home.scss';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 
-class Feed extends Component {
+class Home extends Component {
     render() {
         const { posts } = this.props;
+
         const postList = posts.length ? (
             posts.map(post => {
                 return (
-                    <div>
-                        <span>{post.art}</span>
+                    <div className='postCard' key={post.id}>
+                        <Link to={'/post/' + post.id} ><span>{post.art}</span></Link>
                         <p>{post.caption}</p>
                     </div>
                 )
             })
-        ) : (
-            <div>You do not have any posts on your feed yet...</div>
-        )
+        ) : (<div>You do not have any posts yet...</div>)
 
         return (
-            <div className="userHome" >
+            <div>
                 <h1>Welcome User!</h1>
-                
+                <Link to={'/create'}><button className='button' >New Post</button></Link>
                 {postList}
             </div>
         )
@@ -29,8 +30,8 @@ class Feed extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        posts: state.posts
+        posts: state.post.posts
     }
 }
 
-export default connect(mapStateToProps)(Feed);
+export default connect(mapStateToProps)(Home);

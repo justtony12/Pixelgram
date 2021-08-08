@@ -6,9 +6,8 @@ const Navbar = () => {
     return (
         <nav className="navBar">
             <div>
-                {/* <Link to='/' className="logo"><button className="button">Pixelgram</button></Link> */}
                 <SignedIn />
-                <SignedOut />
+                {/* <SignedOut /> */}
             </div>
         </nav>
     )
