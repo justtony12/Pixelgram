@@ -9,17 +9,17 @@ class Post extends Component {
     }
 
     render() {
-        const post = this.props.posts ? (
+        const {post} = this.props.id ? (
             <div className='post'>
-                <h1>{this.props.posts.art}</h1>
-                <h2>{this.props.posts}</h2>
+                <h1>{this.post}</h1>
+                <h2>{this.post}</h2>
                 <button onClick={this.handleClick} >Delete Post</button>
             </div>
         ) : (<div>Loading post...</div>)
 
         return (
             <div className='singlePost'>
-                {post}
+                This doesn't work right now...
             </div>
         )
     }

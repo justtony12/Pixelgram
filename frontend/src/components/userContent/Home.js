@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 class Home extends Component {
     render() {
         const { posts } = this.props;
+
         const postList = posts.length ? (
             posts.map(post => {
                 return (
