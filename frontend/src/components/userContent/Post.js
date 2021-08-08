@@ -9,10 +9,10 @@ class Post extends Component {
     }
 
     render() {
-        const post = this.props.post ? (
+        const post = this.props.posts ? (
             <div className='post'>
-                <h1>{this.props.post.art}</h1>
-                <h2>{this.props.post.caption}</h2>
+                <h1>{this.props.posts.art}</h1>
+                <h2>{this.props.posts}</h2>
                 <button onClick={this.handleClick} >Delete Post</button>
             </div>
         ) : (<div>Loading post...</div>)
@@ -28,7 +28,7 @@ class Post extends Component {
 const mapStateToProps = (state, ownProps) => {
     let id = ownProps.match.params.post_id;
     return {
-        post: state.posts.find(post => post.id === id)
+        post: state.post.posts.find(post => post.id === id)
     }
 }
 

@@ -29,7 +29,7 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        posts: state.posts
+        posts: state.post.posts
     }
 }
 
