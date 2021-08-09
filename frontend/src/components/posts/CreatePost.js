@@ -22,6 +22,10 @@ class Create extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        // const formData = new FormData(e.target);
+        // this.createPost(formData)
+        // .then(data => props.setState(data.post))
+        // .catch(console.error);
         this.props.createPost(this.state);
     }
 

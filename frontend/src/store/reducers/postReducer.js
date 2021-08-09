@@ -16,6 +16,8 @@ const postReducer = (state = initState, action) => {
             ...state,
             posts: newPosts
         }
+        case 'CREATE_POST':
+            console.log('post created', action.post);
     }
     return state;
 };
