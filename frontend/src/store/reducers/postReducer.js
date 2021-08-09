@@ -8,8 +8,14 @@ const initState = {
 
 const postReducer = (state = initState, action) => {
     switch (action.type) {
-        case 'CREATE_POST':
-            console.log('post created', action.post);
+        case 'DELETE_POST':
+            let newPosts = state.posts.filter(post => {
+                return action.id !== post.id
+        })
+        return {
+            ...state,
+            posts: newPosts
+        }
     }
     return state;
 };
