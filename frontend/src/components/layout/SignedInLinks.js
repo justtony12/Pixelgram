@@ -1,10 +1,11 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom';
-import Home from '../projects/Home';
+import Home from '../posts/Home';
 import Editor from '../editing/Editor';
-import Feed from '../projects/Feed';
-import Create from '../projects/Create';
-import Post from '../projects/Post';
+import Feed from '../posts/Feed';
+import Create from '../posts/CreatePost';
+import Post from '../posts/PostSummary';
+
 
 const SignedIn = () => {
     return (

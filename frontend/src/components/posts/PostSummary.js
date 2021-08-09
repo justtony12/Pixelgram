@@ -1,6 +1,16 @@
-// import React, { Component } from 'react';
+import React, { Component } from 'react';
 // import { connect } from 'react-redux'
 // import { deletePost } from '../userContent/actions/postActions';
+
+class Post extends Component {
+    render () {
+        return(
+            <div>THIS IS MY POST PAGE!!!</div>
+        )
+    }
+}
+
+export default Post;
 
 // class Post extends Component {
 //     handleClick = () => {

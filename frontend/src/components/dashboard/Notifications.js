@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export default function Notifications() {
-    return (
-        <div>
-            Notifications
-        </div>
-    )
+class Notifications extends Component {
+    render() {
+        return (
+            <div>
+                THIS IS MY NOTIFICATIONS BAR!!!
+            </div>
+        )
+    }
 }
+
+export default Notifications;
