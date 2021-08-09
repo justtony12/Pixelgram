@@ -1,6 +1,6 @@
 import React from 'react';
 import SignedIn from './SignedInLinks';
-import SignedOut from './SignedOutLinks';
+// import SignedOut from './SignedOutLinks';
 
 const Navbar = () => {
     return (

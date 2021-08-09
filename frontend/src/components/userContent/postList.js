@@ -2,7 +2,7 @@ import React from 'react';
 
 class PostList extends React.Component {
     listPosts = () => {
-        return this.props.art.map(post => <img key={post.id} src={post.url} alt={post.id} />)
+        return this.props.pixelArt.map(post => <img key={post.id} src={post.url} alt={post.id} />)
     }
 
     render() {
