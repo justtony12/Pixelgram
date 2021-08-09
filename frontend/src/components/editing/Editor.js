@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import '../editing/styles/editor.scss'
+import '../editing/styles/editor.scss';
 import { PhotoshopPicker } from 'react-color'
-import DrawingPanel from '../editing/DrawingPanel'
+import DrawingPanel from '../editing/DrawingPanel';
 
 const Editor = () => {
     const [canvasHeight, setCanvasHeight] = useState(16)

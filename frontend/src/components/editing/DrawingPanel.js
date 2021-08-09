@@ -1,6 +1,7 @@
-import React, {useRef} from 'react'
-import '../editing/styles/drawingPanel.scss'
-import Row from '../editing/Row'
+import React, {useRef} from 'react';
+import '../editing/styles/drawingPanel.scss';
+import '../editing/styles/pixel.scss';
+import Row from '../editing/Row';
 import { exportComponentAsPNG } from 'react-component-export-image'
 import { exportComponentAsJPEG } from 'react-component-export-image'
 
@@ -34,4 +35,4 @@ const DrawingPanel = (props) => {
     )
 }
 
-export default DrawingPanel
+export default DrawingPanel;

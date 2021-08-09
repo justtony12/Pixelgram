@@ -1,13 +1,13 @@
 import React from 'react';
-import SignedIn from './SignedInLinks';
-// import SignedOut from './SignedOutLinks';
+import SignedInLinks from './SignedInLinks'
+import SignedOutLinks from './SignedOutLinks';
 
 const Navbar = () => {
     return (
         <nav className="navBar">
             <div>
-                <SignedIn />
-                {/* <SignedOut /> */}
+                <SignedInLinks />
+                <SignedOutLinks />
             </div>
         </nav>
     )

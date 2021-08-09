@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../editing/styles/pixel.scss'
+import '../editing/styles/pixel.scss';
 
 const Pixel = (props) => {
     const {selectedColor} = props

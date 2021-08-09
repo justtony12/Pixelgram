@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom';
-import Login from '../components/auth/Login'
-import SignUp from '../components/auth/SignUp'
+import Login from '../auth/Login';
+import SignUp from '../auth/SignUp';
 
 const SignedOut = () => {
     return (
