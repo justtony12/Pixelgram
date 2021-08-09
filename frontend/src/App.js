@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
-import Dashboard from './components/dashboard/Dashboard';
+// import Dashboard from './components/dashboard/Dashboard';
 import PostDetails from './components/posts/PostDetails';
 import Login from './components/auth/Login';
 import SignUp from './components/auth/SignUp';
@@ -15,7 +15,7 @@ class App extends Component {
                 <div className='App'>
                     <Navbar />
                     <Switch>
-                        <Route exact path='/' component={Dashboard} />
+                        {/* <Route exact path='/' component={Dashboard} /> */}
                         <Route path='/login' component={Login} />
                         <Route path='/signup' component={SignUp} />
                         <Route path='/create' component={CreatePost} />
