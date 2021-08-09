@@ -1,8 +1,8 @@
 const initState = {
     posts: [
-        {id: 1, art: 'art_1', caption: 'this is my caption for post 1.'},
-        {id: 2, art: 'art_2', caption: 'this is my caption for post 2.'},
-        {id: 3, art: 'art_3', caption: 'this is my caption for post 3.'}
+        {id: '1', art: 'art_1', caption: 'this is my caption for post 1.'},
+        {id: '2', art: 'art_2', caption: 'this is my caption for post 2.'},
+        {id: '3', art: 'art_3', caption: 'this is my caption for post 3.'}
     ]
 }
 
