@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createPost } from '../../store/actions/postActions';
 import '../editing/styles/home.scss';
-import '../editing/styles/home.scss';
 
 class Create extends Component {
     state = {
         art: null,
         caption: ''
     }
+
+    artFile = React.createRef()
 
     handleChange = (e) => {
         this.setState({
@@ -24,9 +25,13 @@ class Create extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.createPost(this.state);
-    }
+        const formData = new FormData(this.state)
+        // formData.append('art', this.artFile)
+        // formData.append('catption', this.state.caption)
+        // debugger
 
+        this.props.createPost(formData);
+    }
     
 
     render() {
@@ -37,10 +42,10 @@ class Create extends Component {
 
                 <form onSubmit={this.handleSubmit}>
                     <label>Upload Art:</label>
-                    <input type='file' id='art' accept='image/*' multiple={false} onChange={this.handleSelectedFile} ref={this.fileInput} /><br/>
+                    <input type='file' id='art' accept='image/*' multiple={false} onChange={this.handleSelectedFile} ref={this.artFile}/><br/>
 
                     <label>Write a capation:</label>
-                    <textarea className='setBox' id='caption' onChange={this.handleChange}/><br/>
+                    <textarea className='setBox' id='caption' onChange={this.handleChange} value={this.state.caption}/><br/>
 
                     <button>Post</button>
                 </form>

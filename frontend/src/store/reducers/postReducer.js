@@ -1,11 +1,3 @@
-// const initState = {
-//     posts: [
-//         {id: '1', art: 'art_1', caption: 'this is my caption for post 1.'},
-//         {id: '2', art: 'art_2', caption: 'this is my caption for post 2.'},
-//         {id: '3', art: 'art_3', caption: 'this is my caption for post 3.'}
-//     ]
-// }
-
 const postReducer = (state = {posts: []}, action) => {
     switch (action.type) {
         case 'LOADING_POSTS':
@@ -27,7 +19,7 @@ const postReducer = (state = {posts: []}, action) => {
         case 'CREATE_POST':
             return {
                 ...state,
-                posts: action.posts
+                posts: action.posts,
             }
         case 'CREATE_POST_ERROR':
             console.log('post error', action.error);

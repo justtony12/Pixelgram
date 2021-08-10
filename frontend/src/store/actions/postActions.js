@@ -6,8 +6,13 @@ export const deletePost = (id) => {
 }
 
 export const createPost = (post) => {
+    debugger
     return (dispatch) => {
-        fetch('http://localhost:3000')
+        fetch('http://localhost:3000/posts',{
+            method: 'POST',
+            headers: {accept: 'application/json'},
+            body: post
+        })
         .then(() => {
             dispatch({ type: 'CREATE_POST', post});
         })
