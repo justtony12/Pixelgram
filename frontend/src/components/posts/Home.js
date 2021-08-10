@@ -14,8 +14,9 @@ class Home extends Component {
         )
 
         return (
-            <div>
+            <div className='posts'>
                 <h1>Welcome To Pixelgram!</h1>
+                <p>Posts will go under here...</p>
                 {postList}
             </div>
         )

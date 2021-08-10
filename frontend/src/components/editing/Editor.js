@@ -27,7 +27,6 @@ const Editor = () => {
 
     return (
         <div id='editor'>
-            <h1>Pixelgram</h1>
             {hideCanvas && <h2>Enter Canvas Dimensions</h2>}
 
             {hideCanvas && (<div id="options">

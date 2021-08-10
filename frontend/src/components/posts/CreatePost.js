@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createPost } from '../../store/actions/postActions';
+import '../editing/styles/home.scss';
+import '../editing/styles/home.scss';
 
 class Create extends Component {
     state = {
@@ -30,7 +32,7 @@ class Create extends Component {
     render() {
 
         return(
-            <div>
+            <div className='posts'>
                 <h1>Post Your Artwork Below</h1>
 
                 <form onSubmit={this.handleSubmit}>
@@ -38,7 +40,7 @@ class Create extends Component {
                     <input type='file' id='art' accept='image/*' multiple={false} onChange={this.handleSelectedFile} ref={this.fileInput} /><br/>
 
                     <label>Write a capation:</label>
-                    <input type='text' id='caption' onChange={this.handleChange}/><br/>
+                    <textarea className='setBox' id='caption' onChange={this.handleChange}/><br/>
 
                     <button>Post</button>
                 </form>
