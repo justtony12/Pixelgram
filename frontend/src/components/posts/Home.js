@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../editing/styles/home.scss';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom'
 import { fetchPosts } from '../../store/actions/postActions';
 
 class Home extends Component {
@@ -16,8 +15,7 @@ class Home extends Component {
 
         return (
             <div>
-                <h1>Welcome User!</h1>
-                <Link to={'/create'}><button className='button' >New Post</button></Link>
+                <h1>Welcome To Pixelgram!</h1>
                 {postList}
             </div>
         )

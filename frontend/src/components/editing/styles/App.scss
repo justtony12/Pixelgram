@@ -5,7 +5,11 @@ html {
 }
 
 body {
-    background: black;
+    background-image: url(./images/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
     color: white;
     display: flex;
     justify-content: center;
@@ -15,20 +19,22 @@ body {
     min-width: fit-content;
 }
 
+
 .button {
     font-size: 1.25rem;
-    background-color: red;
+    background-color: rgb(219, 14, 14);
     color: white;
-    padding: 1rem 3rem;
-    border-radius: 0.25rem;
+    padding: 20px 60px;
+    border-radius: 8px;
     text-transform: uppercase;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     transition: background-color 0.2s ease-in-out;
-    margin-bottom: 2rem;
+    margin-bottom: 1px;
+    margin-right: 25px;
 
     &:hover {
         cursor: pointer;
         background-color: transparent;
-        border-color: white;
+        border-color: black;
     }
 }
