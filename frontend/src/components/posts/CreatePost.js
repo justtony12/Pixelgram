@@ -22,24 +22,23 @@ class Create extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        // const formData = new FormData(e.target);
-        // this.createPost(formData)
-        // .then(data => props.setState(data.post))
-        // .catch(console.error);
         this.props.createPost(this.state);
     }
 
+    
+
     render() {
+
         return(
             <div>
                 <h1>Post Your Artwork Below</h1>
 
                 <form onSubmit={this.handleSubmit}>
                     <label>Upload Art:</label>
-                    <input type='file' id='art' accept='image/*' multiple={false} onChange={this.handleSelectedFile} /><br/>
+                    <input type='file' id='art' accept='image/*' multiple={false} onChange={this.handleSelectedFile} ref={this.fileInput} /><br/>
 
                     <label>Write a capation:</label>
-                    <input type='text' id='caption' onChange={this.handleChange} /><br/>
+                    <input type='text' id='caption' onChange={this.handleChange}/><br/>
 
                     <button>Post</button>
                 </form>

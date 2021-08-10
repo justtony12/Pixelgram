@@ -2,21 +2,17 @@ import React, { Component } from 'react';
 import '../editing/styles/home.scss';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
+import { fetchPosts } from '../../store/actions/postActions';
 
 class Home extends Component {
     render() {
-        const { posts } = this.props;
 
-        const postList = posts.length ? (
-            posts.map(post => {
-                return (
-                    <div className='postCard' key={post.id}>
-                        <Link to={'/post/' + post.id} ><span>{post.art}</span></Link>
-                        <p>{post.caption}</p>
-                    </div>
-                )
-            })
-        ) : (<div>You do not have any posts yet...</div>)
+        const postList = this.props.posts.map (
+            post => <ul key={post.id}>
+                <li>{post.art}</li>
+                <li>{post.caption}</li>
+            </ul>
+        )
 
         return (
             <div>
@@ -30,8 +26,14 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        posts: state.post.posts
+        posts: state.posts
     }
 }
 
-export default connect(mapStateToProps)(Home);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchPosts: (posts) => dispatch(fetchPosts(posts))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
