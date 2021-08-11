@@ -4,12 +4,12 @@ import { createPost } from '../../store/actions/postActions';
 import '../editing/styles/home.scss';
 
 class Create extends Component {
+    artFile = React.createRef()
+
     state = {
-        art: null,
+        art: '',
         caption: ''
     }
-
-    artFile = React.createRef()
 
     handleChange = (e) => {
         this.setState({
@@ -24,12 +24,12 @@ class Create extends Component {
     }
 
     handleSubmit = (e) => {
-        e.preventDefault();
-        const formData = new FormData(this.state)
-        // formData.append('art', this.artFile)
-        // formData.append('catption', this.state.caption)
         // debugger
-
+        e.preventDefault();
+        // console.log(this.state);
+        const formData = new FormData()
+        formData.append('art', this.state.art)
+        formData.append('caption', this.state.caption)
         this.props.createPost(formData);
     }
     
@@ -37,15 +37,15 @@ class Create extends Component {
     render() {
 
         return(
-            <div className='posts'>
+            <div>
                 <h1>Post Your Artwork Below</h1>
 
                 <form onSubmit={this.handleSubmit}>
                     <label>Upload Art:</label>
-                    <input type='file' id='art' accept='image/*' multiple={false} onChange={this.handleSelectedFile} ref={this.artFile}/><br/>
+                    <input type='file' id='art' onChange={this.handleSelectedFile} ref={this.artFile}/><br/>
 
                     <label>Write a capation:</label>
-                    <textarea className='setBox' id='caption' onChange={this.handleChange} value={this.state.caption}/><br/>
+                    <textarea className='setBox' id='caption' onChange={this.handleChange} defaultValue={this.state.caption}/><br/>
 
                     <button>Post</button>
                 </form>

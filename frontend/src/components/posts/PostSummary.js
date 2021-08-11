@@ -20,7 +20,7 @@ class Post extends Component {
 
         return (
             <div className='singlePost'>
-                {post}
+                This is where I would put my single post and whatnot...
             </div>
         )
     }
