@@ -20,7 +20,6 @@ const postReducer = (
         //         posts: newPosts
         //     }
         case 'CREATE_POST':
-            // debugger
             return {
                 ...state,
                 posts: [...state.posts, action.postJSON]

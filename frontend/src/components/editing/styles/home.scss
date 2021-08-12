@@ -20,10 +20,19 @@
 }
 
 .singlePringle {
-    color: greenyellow;
     border: solid black 1px;
-    margin: 5px;
-    background-color: rgba(39, 38, 38, 0.507);
+    margin: 50px;
+    background-color: rgba(32, 31, 31, 0.616);
+    font-size: 15px;
+}
+
+.singleCaption {
+    background-color: whitesmoke;
+    color: black;
+    border: solid transparent;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
 }
 
 .butt {
@@ -45,8 +54,6 @@
     }
 }
 
-.blah {
-    color: black;
-    font-size: 20px;
-    font-weight: 900px;
+.pix {
+    margin: 10px;
 }

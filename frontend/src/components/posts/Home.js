@@ -30,7 +30,6 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state) => {
-    // debugger
     return {
         myPost: state.posts,
         loading: state.loading
