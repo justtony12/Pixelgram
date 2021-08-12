@@ -1,25 +1,26 @@
-const postReducer = (state = {posts: []}, action) => {
+const postReducer = (state = {posts: [], loading: false}, action) => {
     switch (action.type) {
         case 'LOADING_POSTS':
             return {
                 ...state,
-                posts: [...state.posts]
+                loading: true
             }
         case 'ADD_POSTS':
             return {
                 ...state,
-                posts: action.posts
+                posts: action.posts,
+                loading: false
             }
-        case 'DELETE_POST':
-            let newPosts = state.posts.filter(post => {return action.id !== post.id})
-            return {
-                ...state,
-                posts: newPosts
-            }
+        // case 'DELETE_POST':
+        //     let newPosts = state.posts.filter(post => {return action.id !== post.id})
+        //     return {
+        //         ...state,
+        //         posts: newPosts
+        //     }
         case 'CREATE_POST':
             return {
                 ...state,
-                posts: action.posts,
+                posts: action.posts
             }
         case 'CREATE_POST_ERROR':
             console.log('post error', action.error);

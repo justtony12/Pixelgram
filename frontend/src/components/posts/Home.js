@@ -2,22 +2,28 @@ import React, { Component } from 'react';
 import '../editing/styles/home.scss';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../../store/actions/postActions';
+import PostList from './PostList';
 
 class Home extends Component {
+
+    componentDidMount() {
+        this.props.fetchPosts()
+    }
+
+    handleLoading = () => {
+        if(this.props.loading) {
+            return <div>Loading...</div>
+        } else {
+            return <PostList myPost={this.props.myPost} />
+        }
+    }
+
     render() {
-
-        const postList = this.props.posts.map (
-            post => <ul key={post.id}>
-                <li>{post.art}</li>
-                <li>{post.caption}</li>
-            </ul>
-        )
-
         return (
             <div className='posts'>
                 <h1>Welcome To Pixelgram!</h1>
                 <p>Posts will go under here...</p>
-                {postList}
+                {this.handleLoading()}
             </div>
         )
     }
@@ -25,7 +31,8 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        posts: state.posts
+        myPost: state.posts,
+        loading: state.loading
     }
 }
 

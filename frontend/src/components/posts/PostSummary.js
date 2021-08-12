@@ -10,13 +10,13 @@ class Post extends Component {
     }
 
     render() {
-        const post = this.props.post ? (
-            <div className='post'>
-                <h1>{this.props.post.art}</h1>
-                <h2>{this.props.post.caption}</h2>
-                <button onClick={this.handleClick} >Delete Post</button>
-            </div>
-        ) : (<div>Loading post...</div>)
+        // const post = this.props.post ? (
+        //     <div className='post'>
+        //         <h1>{this.props.post.art}</h1>
+        //         <h2>{this.props.post.caption}</h2>
+        //         <button onClick={this.handleClick} >Delete Post</button>
+        //     </div>
+        // ) : (<div>Loading post...</div>)
 
         return (
             <div className='singlePost'>

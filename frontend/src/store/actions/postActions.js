@@ -28,9 +28,9 @@ export const createPost = (post) => {
 
 export const fetchPosts = () => {
     return (dispatch) => {
-        dispatch({type: 'LOADING_POSTS'});
+        dispatch({type: 'LOADING_POSTS'})
         fetch('http://localhost:3000/posts')
         .then(resp => {return resp.json()})
-        .then(posts => dispatch({type: 'ADD_POSTS', posts}))
+        .then(postsJSON => {dispatch({type: 'ADD_POSTS', posts: postsJSON})})
     }
 }

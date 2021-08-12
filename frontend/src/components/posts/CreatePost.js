@@ -24,13 +24,12 @@ class Create extends Component {
     }
 
     handleSubmit = (e) => {
-        // debugger
         e.preventDefault();
-        // console.log(this.state);
-        const formData = new FormData()
-        formData.append('art', this.state.art)
-        formData.append('caption', this.state.caption)
+        const formData = new FormData();
+        formData.append('art', this.state.art);
+        formData.append('caption', this.state.caption);
         this.props.createPost(formData);
+        this.props.history.push('/home');
     }
     
 
