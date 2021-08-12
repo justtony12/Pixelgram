@@ -1,8 +1,9 @@
 .pixel {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 30px;
+    height: 30px;
+    border: solid rgba(22, 22, 22, 0.514) 1px;
 
     &:hover {
-        cursor: pointer;
+        cursor: crosshair;
     }
 }
