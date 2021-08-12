@@ -14,6 +14,7 @@ class Home extends Component {
         if(this.props.loading) {
             return <div>Loading...</div>
         } else {
+            // debugger
             return <PostList myPost={this.props.myPost} />
         }
     }
@@ -29,6 +30,7 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state) => {
+    // debugger
     return {
         myPost: state.posts,
         loading: state.loading

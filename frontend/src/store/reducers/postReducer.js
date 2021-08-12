@@ -1,5 +1,7 @@
-const postReducer = (state = {posts: [], loading: false}, action) => {
-    switch (action.type) {
+const postReducer = (
+    state = {posts: [], loading: false}, action) => {
+    switch (action.type)
+    {
         case 'LOADING_POSTS':
             return {
                 ...state,
@@ -18,9 +20,10 @@ const postReducer = (state = {posts: [], loading: false}, action) => {
         //         posts: newPosts
         //     }
         case 'CREATE_POST':
+            // debugger
             return {
                 ...state,
-                posts: action.posts
+                posts: [...state.posts, action.postJSON]
             }
         case 'CREATE_POST_ERROR':
             console.log('post error', action.error);

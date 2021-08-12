@@ -32,5 +32,8 @@ export const fetchPosts = () => {
         fetch('http://localhost:3000/posts')
         .then(resp => {return resp.json()})
         .then(postsJSON => {dispatch({type: 'ADD_POSTS', posts: postsJSON})})
+        .catch((error) => {
+            dispatch({type: 'CREATE_POST_ERROR', error})
+        })
     }
 }

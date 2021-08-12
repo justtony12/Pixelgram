@@ -29,7 +29,7 @@ class Create extends Component {
         formData.append('art', this.state.art);
         formData.append('caption', this.state.caption);
         this.props.createPost(formData);
-        this.props.history.push('/home');
+        this.props.history.push('/');
     }
     
 
