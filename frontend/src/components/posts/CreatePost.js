@@ -40,13 +40,18 @@ class Create extends Component {
                 <h1>Post Your Artwork Below</h1>
 
                 <form onSubmit={this.handleSubmit}>
-                    <label>Upload Art:</label>
+                    <label className='blah'>Upload Art:</label>
                     <input type='file' id='art' onChange={this.handleSelectedFile} ref={this.artFile}/><br/>
 
-                    <label>Write a capation:</label>
-                    <textarea className='setBox' id='caption' onChange={this.handleChange} defaultValue={this.state.caption}/><br/>
+                    <textarea
+                        className='setBox'
+                        id='caption'
+                        onChange={this.handleChange}
+                        defaultValue={this.state.caption}
+                        placeholder='Write a caption...'
+                    /><br/>
 
-                    <button>Post</button>
+                    <button className='butt' >Post</button>
                 </form>
             </div>
         )

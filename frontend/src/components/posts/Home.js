@@ -22,7 +22,6 @@ class Home extends Component {
         return (
             <div className='posts'>
                 <h1>Welcome To Pixelgram!</h1>
-                <p>Posts will go under here...</p>
                 {this.handleLoading()}
             </div>
         )

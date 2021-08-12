@@ -1,11 +1,52 @@
 .setBox {
+    width: 90%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
     resize: none;
-    height: 100px;
-    width: 350px;
+    margin: 10px;
 }
 
 .posts {
+    color: rgb(24, 128, 128);
+    font-size: 20px;
     margin-top: 25px;
     border: 2px solid black;
+    border-radius: 5px;
     background-color: rgba(71, 71, 100, 0.719);
+}
+
+.singlePringle {
+    color: greenyellow;
+    border: solid black 1px;
+    margin: 5px;
+    background-color: rgba(39, 38, 38, 0.507);
+}
+
+.butt {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(24, 128, 128);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease-in-out;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        border-color: black;
+    }
+}
+
+.blah {
+    color: black;
+    font-size: 20px;
+    font-weight: 900px;
 }
