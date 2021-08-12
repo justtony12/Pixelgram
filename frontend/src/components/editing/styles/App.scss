@@ -3,23 +3,24 @@ html {
     margin: 5px;
     padding: 5px;
 
+    background-color: rgb(12, 12, 12);
+
     background-image: url(./images/bg.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
-    
+    background-size: 80% 100%;
+    background-position: center;
 }
 
 body {
-    color: white;
-    display: flex;
+    color: whitesmoke;
+    display:flex;
     justify-content: center;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     min-width: fit-content;
 }
-
 
 .button {
     font-size: 25px;

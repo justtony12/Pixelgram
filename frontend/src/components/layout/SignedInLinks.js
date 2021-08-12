@@ -10,13 +10,13 @@ const SignedIn = () => {
     return (
         <Router>
             <div className='App'>
-                <Link to='/home'><button className='button'>Home</button></Link>
+                <Link to='/'><button className='button'>Home</button></Link>
                 <Link to='/editor'><button className='button'>Editor</button></Link>
                 <Link to='/create'><button className='button'>New Post</button></Link>
             </div>
 
             <Switch>
-                <Route exact path='/home' component={Home} />
+                <Route exact path='/' component={Home} />
                 <Route exact path='/editor' component={Editor} />
                 <Route exact path='/create'component={Create} />
                 <Route exact path='/post/:post_id'component={Post} />

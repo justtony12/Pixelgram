@@ -36,7 +36,7 @@ class Create extends Component {
     render() {
 
         return(
-            <div>
+            <div className='posts'>
                 <h1>Post Your Artwork Below</h1>
 
                 <form onSubmit={this.handleSubmit}>
