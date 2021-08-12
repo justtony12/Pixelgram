@@ -11,8 +11,8 @@ const SignedIn = () => {
         <Router>
             <div className='App'>
                 <Link to='/'><button className='button'>Home</button></Link>
-                <Link to='/editor'><button className='button'>Editor</button></Link>
-                <Link to='/create'><button className='button'>New Post</button></Link>
+                <Link to='/editor'><button className='button'>Creator</button></Link>
+                <Link to='/create'><button className='button'>Share your art</button></Link>
             </div>
 
             <Switch>

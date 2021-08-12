@@ -26,12 +26,17 @@ const Pixel = (props) => {
         setCanChangeColor(true)
     }
 
+    function draw() {
+        setOriginalColor(pixelColor)
+        setPixelColor(selectedColor)
+    }
+
     return (
         <div
             className='pixel'
             style={{backgroundColor: pixelColor}}
             onClick={applyColor}
-            onDragEnter={applyColor} //this is a bit buggy at the moment.
+            onDragOver={draw} //this is a bit buggy at the moment.
             onMouseEnter={changeColorOnHover}
             onMouseLeave={reset}>
         </div>
