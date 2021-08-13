@@ -21,9 +21,11 @@ class Home extends Component {
 
     render() {
         return (
-            <div className='posts'>
-                <h1>Welcome To Pixelgram!</h1>
-                {this.handleLoading()}
+            <div className='hmm'>
+                <div>
+                    <h1 className='Welcome'>Welcome To Pixelgram!</h1>
+                    {this.handleLoading()}
+                </div>
             </div>
         )
     }

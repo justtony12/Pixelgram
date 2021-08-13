@@ -1,77 +1,67 @@
-.setBox {
-    width: 90%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: none;
-    margin: 10px;
-}
-
-.posts {
-    color: whitesmoke;
-    text-shadow: 2px 2px 4px rgb(10, 134, 134);
-    font-size: 30px;
-    margin-top: 25px;
-    margin-left: 475px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: rgba(71, 71, 100, 0.719);
-    width: 50%;
-    height: 50%;
-}
-
 .form {
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    margin-top: 25px;
-    margin-left: 300px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: rgba(71, 71, 100, 0.719);
-    width: 50%;
-    height: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius:  5px;
+    background-color: rgba(17, 143, 143, 0.582);
+    flex-direction: column;
+    margin: 30px;
 }
 
-.singlePringle {
-    border: solid black 1px;
-    border-radius: 5px;
-    margin: 50px;
-    background-color: rgba(32, 31, 31, 0.616);
+.hmm {
+    background-color: rgba(17, 143, 143, 0.582);
+    border: solid black 3px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 30px;
+    min-height: fit-content;
+    min-width:100%;
+}
+
+.home {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgba(156, 163, 142, 0.582);
+    border-radius: 0.25rem;
+    padding: 1rem 4rem 2rem 4rem;
+    min-height: fit-content;
+    max-width: fit-content;
+    margin: 15px;
 }
 
 .singleCaption {
-    background-color: rgb(236, 230, 230);
-    font-size: 20px;
-    color: black;
-    border: solid transparent;
+    background-color: rgb(241, 233, 233);
+    border: solid black 1px;
     border-radius: 5px;
-    padding: 5px;
-    margin-left: 100px;
-    width: 75%;
+    color: black;
+    min-height: fit-content;
+    min-width: fit-content;
+    padding: 10px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.setBox {
+    resize: none;
+    height: 250px;
+    width: 500px;
+    margin: 25px;
 }
 
 .butt {
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(24, 128, 128);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 8px;
+    font-size: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.479);
+    color: whitesmoke;
+    padding: 1rem 3rem;
+    border-radius: 0.25rem;
     text-transform: uppercase;
-    border: 1px solid black;
+    border: 1px solid transparent;
     transition: background-color 0.2s ease-in-out;
-    margin-bottom: 10px;
-    margin-right: 25px;
+    margin-bottom: 2rem;
+
     &:hover {
         cursor: pointer;
         background-color: transparent;
-        border-color: black;
+        border-color: rgb(255, 255, 255);
     }
-}
-
-.pix {
-    margin: 10px;
 }

@@ -9,7 +9,7 @@ import Post from '../posts/PostSummary';
 const SignedIn = () => {
     return (
         <Router>
-            <div className='App'>
+            <div className='Navbar'>
                 <Link to='/'><button className='button'>Home</button></Link>
                 <Link to='/editor'><button className='button'>Creator</button></Link>
                 <Link to='/create'><button className='button'>Upload</button></Link>
