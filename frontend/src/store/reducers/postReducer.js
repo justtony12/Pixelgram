@@ -13,12 +13,12 @@ const postReducer = (
                 posts: action.posts,
                 loading: false
             }
-        // case 'DELETE_POST':
-        //     let newPosts = state.posts.filter(post => {return action.id !== post.id})
-        //     return {
-        //         ...state,
-        //         posts: newPosts
-        //     }
+        case 'DELETE_POST':
+            let newPosts = state.posts.filter(post => {return action.id !== post.id})
+            return {
+                ...state,
+                posts: newPosts
+            }
         case 'CREATE_POST':
             return {
                 ...state,

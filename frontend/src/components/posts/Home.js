@@ -3,6 +3,7 @@ import '../editing/styles/home.scss';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../../store/actions/postActions';
 import PostList from './PostList';
+import Duck from './Images/duck500.png';
 
 class Home extends Component {
 
@@ -12,9 +13,8 @@ class Home extends Component {
 
     handleLoading = () => {
         if(this.props.loading) {
-            return <div>Loading...</div>
+            return <div className='home' ><img src={Duck} alt='The ducking servers are down...' /></div>
         } else {
-            // debugger
             return <PostList myPost={this.props.myPost} />
         }
     }

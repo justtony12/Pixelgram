@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { deletePost } from '../../store/actions/postActions';
-
+import '../editing/styles/home.scss';
+import Duck from './Images/duck500.png';
+import Houston from './Images/weHaveAProblem.png';
 
 class Post extends Component {
     handleClick = () => {
@@ -10,17 +12,19 @@ class Post extends Component {
     }
 
     render() {
-        // const post = this.props.post ? (
-        //     <div className='post'>
-        //         <h1>{this.props.post.art}</h1>
-        //         <h2>{this.props.post.caption}</h2>
-        //         <button onClick={this.handleClick} >Delete Post</button>
-        //     </div>
-        // ) : (<div>Loading post...</div>)
+        console.log(this.props.singlePost)
+        const post = this.props.singlePost ? (
+            <div>
+                <img src={'http://localhost:3000' + this.props.singlePost.art_format.url} alt={this.props.singlePost.art_format.name} />
+                <p>{this.props.singlePost.caption}</p>
+            </div>
+        ) : (
+            <div className='home' ><img src={Houston} alt='The ducking servers are down...' /></div>
+        );
 
         return (
             <div className='singlePost'>
-                This is where I would put my single post and whatnot...
+                {post}
             </div>
         )
     }
@@ -29,7 +33,8 @@ class Post extends Component {
 const mapStateToProps = (state, ownProps) => {
     let id = ownProps.match.params.post_id;
     return {
-        post: state.post.posts.find(post => post.id === id)
+        singlePost: state.posts.find(post => post.id === id),
+        loading: state.loading
     }
 }
 

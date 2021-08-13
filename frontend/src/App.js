@@ -10,19 +10,19 @@ class App extends Component {
     render() {
         return (
             <Router>
-            <div className='Navbar'>
-                <Link to='/'><button className='button'>Home</button></Link>
-                <Link to='/editor'><button className='button'>Creator</button></Link>
-                <Link to='/create'><button className='button'>Upload</button></Link>
-            </div>
+                <div className='Navbar'>
+                    <Link to='/'><button className='button'>Home</button></Link>
+                    <Link to='/creator'><button className='button'>Creator</button></Link>
+                    <Link to='/upload'><button className='button'>Upload</button></Link>
+                </div>
 
-            <Switch>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/editor' component={Editor} />
-                <Route exact path='/create'component={Create} />
-                <Route exact path='/post/:post_id'component={Post} />
-            </Switch>
-        </Router>
+                <Switch>
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/creator' component={Editor} />
+                    <Route exact path='/upload'component={Create} />
+                    <Route exact path='/post/:post_id'component={Post} />
+                </Switch>
+            </Router>
         );
     }
 }
