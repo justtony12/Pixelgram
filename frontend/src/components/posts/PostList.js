@@ -7,7 +7,7 @@ class PostList extends React.Component {
         return (
             this.props.myPost.map(post => (
                 <div key={post.id} className='singlePringle'>
-                    <h3 className='singleCaption'>{post.caption}</h3>
+                    <p className='singleCaption'>{post.caption}</p>
                     <img className='pix' src={'http://localhost:3000' + post.art_format.url} alt={post.art_format.name} />
                 </div>
             )
@@ -16,6 +16,7 @@ class PostList extends React.Component {
     }
 
     render() {
+
         return (
             <div>
                 {this.postList()}
