@@ -11,8 +11,9 @@
 }
 
 .posts {
-    color: rgb(0, 0, 0);
-    font-size: 20px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px rgb(10, 134, 134);
+    font-size: 30px;
     margin-top: 25px;
     margin-left: 475px;
     border: 2px solid black;
@@ -36,12 +37,14 @@
 
 .singlePringle {
     border: solid black 1px;
+    border-radius: 5px;
     margin: 50px;
     background-color: rgba(32, 31, 31, 0.616);
 }
 
 .singleCaption {
     background-color: rgb(236, 230, 230);
+    font-size: 20px;
     color: black;
     border: solid transparent;
     border-radius: 5px;
