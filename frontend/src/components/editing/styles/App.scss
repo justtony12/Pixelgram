@@ -12,11 +12,13 @@ body {
   
     background-color: black;
 
-    color: whitesmoke;
+    color: rgb(168, 166, 173);
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: 30px;
     text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 25px aqua, 0 0 5px greenyellow;
     text-align: center;
     min-width: fit-content;
