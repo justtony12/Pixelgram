@@ -11,7 +11,7 @@
     border: solid black 3px;
     border-radius: 10px;
     padding: 10px;
-    margin: 30px;
+    margin-top: 30px;
     min-height: fit-content;
     min-width:100%;
 }
@@ -49,13 +49,16 @@ img{
 }
 
 .butt {
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 5px 5px 10px #ffffff;
     font-size: 1.25rem;
+    font-weight: 900;
     background-color: rgba(0, 0, 0, 0.479);
     color: whitesmoke;
     padding: 1rem 3rem;
     border-radius: 0.25rem;
     text-transform: uppercase;
-    border: 1px solid transparent;
+    border: 1px solid black;
     transition: background-color 0.2s ease-in-out;
     margin-bottom: 2rem;
 

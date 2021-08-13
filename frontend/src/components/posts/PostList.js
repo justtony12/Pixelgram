@@ -7,8 +7,8 @@ class PostList extends React.Component {
         return (
             this.props.myPost.map(post => (
                 <div key={post.id} className='home'>
-                    <p className='singleCaption'>{post.caption}</p>
                     <img src={'http://localhost:3000' + post.art_format.url} alt={post.art_format.name} />
+                    <p className='singleCaption'>{post.caption}</p>
                 </div>
             )
             )
