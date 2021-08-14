@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { deletePost } from '../../store/actions/postActions';
 import '../editing/styles/home.scss';
-import Duck from './Images/duck500.png';
 import Houston from './Images/weHaveAProblem.png';
 
 class Post extends Component {
