@@ -6,6 +6,20 @@ This application is a simple pixelart creator made with React, react-redux and t
 
 * To install, copy the SSH link which can be found at the top right corner and paste it in to your terminal.
 * Once the repo is done copying onto your computer, run npm install to install all the required packages.
-> npm install
+
+```bash
+npm install
+```
 * After all the packages are done installing you can start up the backend or just run npm start to start up the application.
-> npm start
+
+```bash
+npm start
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
