@@ -36,7 +36,7 @@ const Pixel = (props) => {
             className='pixel'
             style={{backgroundColor: pixelColor}}
             onClick={applyColor}
-            onDragOver={draw} //this is a bit buggy at the moment.
+            onDragOver={draw}
             onMouseEnter={changeColorOnHover}
             onMouseLeave={reset}>
         </div>
