@@ -1,5 +1,5 @@
 const postReducer = (
-    state = {posts: [], loading: false}, action) => {
+    state = { posts: [], loading: false, likes: 0 }, action) => {
     switch (action.type)
     {
         case 'LOADING_POSTS':
@@ -13,12 +13,6 @@ const postReducer = (
                 posts: action.posts,
                 loading: false
             }
-        // case 'DELETE_POST':
-        //     let newPosts = state.posts.filter(post => {return action.id !== post.id})
-        //     return {
-        //         ...state,
-        //         posts: newPosts
-        //     }
         case 'CREATE_POST':
             return {
                 ...state,

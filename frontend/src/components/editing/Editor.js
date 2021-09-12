@@ -35,7 +35,7 @@ const Editor = () => {
                     <input
                         type='number'
                         className="panelInput"
-                        defaultValue={canvasWidth}
+                        defaultValue={canvasHeight}
                         onChange={(e) => {setCanvasHeight(e.target.value)}}
                     />
                 </div>
@@ -45,7 +45,7 @@ const Editor = () => {
                     <input
                         type='number'
                         className="panelInput"
-                        defaultValue={canvasHeight}
+                        defaultValue={canvasWidth}
                         onChange={(e) => {setCanvasWidth(e.target.value)}}
                     />
                 </div>
@@ -64,4 +64,4 @@ const Editor = () => {
     )
 }
 
-export default Editor
+export default Editor;

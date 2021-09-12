@@ -70,3 +70,22 @@ img{
         border-color: rgb(255, 255, 255);
     }
 }
+
+.panelInput {
+    height: 2rem;
+    width: 3rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid gray;
+    border-radius: 0.25rem;
+    margin: 0 1rem 0.5rem 1rem;
+    padding-left: 1rem;
+
+    &:focus {
+      outline: none !important;
+      border-color: rgb(255, 255, 255);
+      box-shadow: 0 0 0.5rem gray;
+    }
+  }
