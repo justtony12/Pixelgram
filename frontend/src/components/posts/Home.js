@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import '../editing/styles/home.scss';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../../store/actions/postActions';
-// import PostList from './PostList';
 import Duck from './Images/duck500.png';
-import CounterInput from './CounterInput';
 import PostList from './PostList';
 
 class Home extends Component {
