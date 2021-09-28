@@ -16,6 +16,10 @@ npm install
 npm start
 ```
 
+## Usage
+
+[View Demo Here](https://youtu.be/eX11hpcQ-qM)
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
