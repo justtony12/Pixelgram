@@ -1,6 +1,6 @@
 # Pixelgram
 
-This application is a simple pixelart creator made with React, react-redux and thunk. In this app you can create your own pixelart and export it, you can also connect it to a backend database and sheare your work online. This repo only contains the frontend portion of the project however, you can find the backend API at https://github.com/justtony12/backendAPI.git.
+This application is a simple pixelart creator made with React, react-redux and thunk. In this app you can create your own pixelart and export it as a PNG or JPEG file. You can also connect it to a backend database and sheare your work online. This repo only contains the frontend portion of the project however, you can find the backend API at https://github.com/justtony12/backendAPI.git.
 
 ## Installation
 
@@ -15,6 +15,10 @@ npm install
 ```bash
 npm start
 ```
+
+If you don't connect your app to the backend you will get this cute duck message reminding you to start up your servers.
+
+![Pixelgram Main Page](/images/duckster.PNG)
 
 ## Usage
 
