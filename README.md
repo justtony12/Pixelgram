@@ -35,7 +35,9 @@ If you navigate to the top of your home page and click on the creator button you
 
 ![Pixelgram Canvas Setter](/images/canvasDem.PNG)
 
-If you want to remove the pre existing artwork just clear you database in the backend.
+Once you set your desired dimensions, you will see a black canvas, if you want to reset the size click the reset button at the top(note that if you reset the canvas size you are also clearing any work you've previously made).
+
+![Pixelgram Black Canvas](/images/newCanvas.PNG)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
