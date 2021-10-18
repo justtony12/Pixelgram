@@ -24,14 +24,18 @@ To start up your backend check out my backend API repo https://github.com/justto
 
 ## Usage
 
-Once you start up your backend and your front end you will see your home page with some art like so...
+[View Demo Here](https://youtu.be/eX11hpcQ-qM)
+
+
+Once you start up your backend and your front end you will see your home page with some art with some captions like so...
 
 ![Pixelgram Home Page](/images/workingSmile.PNG)
 
+If you navigate to the top of your home page and click on the creator button you will be taken to the pixel art editor where you can set your canvas dimensions (note, the bigger your canvas the more detail you can add but it also takes up a lot of screen space).
+
+![Pixelgram Canvas Setter](/images/canvasDem.PNG)
+
 If you want to remove the pre existing artwork just clear you database in the backend.
-
-
-[View Demo Here](https://youtu.be/eX11hpcQ-qM)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
