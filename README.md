@@ -18,9 +18,18 @@ npm start
 
 If you don't connect your app to the backend you will get this cute duck message reminding you to start up your servers.
 
-![Pixelgram Main Page](/images/duckster.PNG)
+![Pixelgram Duck Page](/images/duckster.PNG)
+
+To start up your backend check out my backend API repo https://github.com/justtony12/backendAPI.git.
 
 ## Usage
+
+Once you start up your backend and your front end you will see your home page with some art like so...
+
+![Pixelgram Home Page](/images/workingSmile.PNG)
+
+If you want to remove the pre existing artwork just clear you database in the backend.
+
 
 [View Demo Here](https://youtu.be/eX11hpcQ-qM)
 
